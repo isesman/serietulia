@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ca-ES">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--LINK CDN - FONTAWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--ENLACE AL SCRIPT (EN EL HEAD POR SER ASYNCRON)-->
+        <script src="js/app.js" type="module"></script>
+
+        <!--ENLACE CON GOOGLE FONT (ROBOTO 400 / 500 /// MONTSERRAT 500):-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+        <title>La Serietúlia - Festival de Series de Barcelona 2023</title>
+    </head>
+
+    <body>
+        
+        <header>
+
+            <!--LOGO WEB-->
+            <img src="media/img/logo/serietulia.svg" alt="Logo Serietúlia" class="logo">
+
+            <div class="header flex">
+
+                <img src="media/img/header-image.jpg" alt="Dos manos aguantando un televisor antiguo." class="header-img">
+
+                <form action="file.php">
+                    <h1>Maníacs de les sèries? <span class="blue-text">Teniu una cita ineludible.</span></h1>
+                    <p>Els pròxims 18 i 19 de novembre tens una cita que no pots deixar perdre. Passa't a compartir la teva passió pel setè art "de sofà" amb uns convidats excepcionals.</p>
+                    <ul>
+                        <li>
+                            <input type="email" name="alta-newsletter" id="alta-newsletter" tabindex="1" required>
+                            <button type="submit">Alta Newsletter</button>
+                        </li>
+                        <li >
+                            <input type="checkbox" name="politics-accept" id="politics-accept" tabindex="2" required> 
+                            <label for="politics-accept">He llegit i acepto la <a href="#">política de privacitat.</a></label>
+                        </li>
+                    </ul>
+                    
+                </form>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <!--
+                DIV (NO HAGO SECTION POR LA NECESIDAD DE H2):
+                    3 ARTÍCULOS (TODOS RELACIÓN CON EL FESTIVAL):
+                        1. ACTIVIDADES 
+                        2. INVITADOS 
+                        3. MEJORES SERIES
+            -->
+            <div class="section-div">
+
+                <!--1. ACTIVIDADES-->
+                <article class="activities">
+
+                    <h2 class="article-h2">Activitats dins del festival</h2>
+                    
+                    <div class="flex">
+                        <div>
+                            <span class="fa-solid fa-mug-saucer fa-7x"></span>
+                            <p>Taules rodones</p>
+                        </div>
+    
+                        <div>
+                            <span class="fa-solid fa-video fa-7x"></span>
+                            <p>Projecció de sèries</p>
+                        </div>
+    
+                        <div>
+                            <span class="fa-solid fa-comments fa-7x"></span>
+                            <p>Debats amb els convidats</p>
+                        </div>
+    
+                        <div>
+                            <span class="fa-solid fa-address-card fa-7x"></span>
+                            <p>Serietúlia Pro</p>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!--2. ACTORES INVITADOS-->
+                <article>
+
+                    <h2 class="article-h2">Convidats de luxe</h2>
+
+                    <p class="p-actors">Actors, actrius i guionistes convidats a les xerrades i debats en el visionament de capítols emblemàtics que es durà a terme a la Filmoteca.</p>
+
+                    <div id="actors" class="flex actors">
+
+                    </div>
+
+                <!--A TRAVÉS DE JAVASCRIPT MOSTRAMOS LA INFORMACIÓN DE LOS ACTORES/ACTRICES.-->
+
+                </article>
+
+                <!--3. MEJORES SERIES-->
+                <article class="series">
+
+                    <h2 class="article-h2">Les millors sèries</h2>
+                    <p>Troba les sèries que projectem al festival a la teva plataforma.</p>
+
+                    <div class="filter flex">
+                        <button type="button" class="button-totes" id="totes">Totes</button>
+                        <button type="button" id="hbo">HBO Max</button>
+                        <button type="button" id="netflix">Netflix</button>
+                        <button type="button" id="filmin">Filmin</button>
+                        <button type="button" id="prime">Prime</button>
+                        <button type="button" id="disney">Disney+</button>
+                    </div>
+
+                    <div id="series" class="series-container flex"></div>
+
+                </article>
+
+            </div>
+
+            <!--INFORMACIÓN-->
+            <aside>
+
+                <h2>Vols rebre informació?</h2>
+
+                <form action="file.php">
+
+                    <ul>
+                        <li>
+                            <input type="email" name="alta-newsletter" id="alta-newsletter" tabindex="1" required>
+                            <button type="submit" class="info-button">Alta Newsletter</button>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="politics-accept" id="politics-accept" tabindex="2" required> 
+                            <label for="politics-accept">He llegit i acepto la <a href="#">política de privacitat.</a></label>
+                        </li>
+                    </ul>
+                    
+                </form>
+
+            </aside>
+        </main>
+
+        <footer>
+
+            <h2 class="article-h2">Espais i dates</h2>
+
+            <div class="div-map-date flex">    
+                
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.787323061606!2d2.16814147537038!3d41.37870519653473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a258e24deebd%3A0xf37164beee245bad!2sLa%20Monroe!5e0!3m2!1ses!2ses!4v1686209955458!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <div class="ubication flex">
+                    <p class="date">18 i 19 de novembre</p>
+                    <p><span class="p-title">Filmoteca de Catalunya</span><span class="space"></span>Plaça Salvador Seguí, 1 - 9<span class="space"></span>08001 Barcelona</p>
+                    <p><span class="p-title">Restaurant La Monroe</span><span class="space"></span>Plaça Salvador Seguí<span class="space"></span>08001 Barcelona</p>
+                </div>
+
+            </div>
+
+            <div class="div-partners-sponsors">
+
+                <h2 class="article-h2 underline">Patrocinadors i col·laboradors</h2>
+
+                <div class="div-sponsors flex">
+                    <img src="media/img/sponsor/damm.png" alt="Logo de Estrella Damm" class="damm">
+                    <img src="media/img/sponsor/vichy.png" alt="Logo de Vichy Catalan" class="vichy">
+                </div>
+
+                <div class="partners-top flex">
+                    <img src="media/img/partners/hbo.png" alt="Logo de HBO España" class="hbo">
+                    <img src="media/img/partners/netflix.png" alt="Logo de Netflix" class="netflix">
+                    <img src="media/img/partners/rtve.png" alt="Logo de RTVE" class="rtve">
+                    <img src="media/img/partners/icat-fm.png" alt="Logo de iCat FM" class="icat">
+                    <img src="media/img/partners/time-out.png" alt="Logo de TimeOut Barcelona" class="timeout">
+                </div>
+
+                <div class="partners-bottom flex">
+                    <img src="media/img/partners/ajuntament-barcelona.png" alt="Logo del Ayuntamiento de  Barcelona" class="ajunt-bcn">
+                    <img src="media/img/partners/beteve.png" alt="Logo de Betevé" class="beteve">
+                    <img src="media/img/partners/catalunya-film-festival.png" alt="Logo de Catalunya Film Festivals" class="cat-film">
+                    <img src="media/img/partners/escac.png" alt="Logo de Escac (Escola Superior de Cinema i Audiovisuals de Catalunya)" class="escac">
+                    <img src="media/img/partners/cccb.png" alt="Logo de CCCB (Centre de Cultura Contemporània de Barcelona)" class="cccb">
+                </div>
+
+            </div>
+
+        </footer>
+        
+    </body>
+</html>
